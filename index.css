@@ -8,6 +8,12 @@
 html {
   scroll-behavior: smooth;
 }
+.container{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: #FAF7F3;
+}
 
 * {
   padding: 0;
@@ -96,4 +102,69 @@ a {
   border-radius: 50%;
   color: var(--navbar-link);
   background-color: var(--navbar-background);
+}
+
+/* Product Box */
+
+.product-part{
+  gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  width: 70%;
+}
+
+.product-box{
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  gap: .7rem;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  flex-wrap: wrap;
+  transition: all .4s;
+  background-color: #fff;
+}
+
+.product-box:hover{
+  transform: translateY(-2px);
+}
+
+.price-order,h3{
+  padding: 12px;
+}
+
+section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  scroll-margin-top: 15px;
+}
+
+.img-part{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-part img{
+  width: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.price-order{
+  display: flex;
+  gap: .5rem;
+  justify-content: space-between;
+}
+
+.orderLinks{
+  background-color: var(--navbar-background);
+  border-radius: 15px;
+  padding: 4px 12px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
 }
