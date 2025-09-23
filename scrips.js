@@ -1,4 +1,4 @@
-  const phone = "994553924931"; 
+  const phone = "994556028288"; 
   const as = document.querySelectorAll(".orderLinks");
 
  as.forEach(a => {
