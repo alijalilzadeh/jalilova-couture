@@ -1,4 +1,4 @@
-  const phone = "994553924931"; // bibinin nömrəsi
+  const phone = "994553924931"; 
   const as = document.querySelectorAll("a");
 
  as.forEach(a => {
@@ -7,6 +7,6 @@
       const imgUrl = a.dataset.img;
       const message = `Mən bu məhsulu sifariş etmək istəyirəm:\n${product}\n${imgUrl}`;
       const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-      window.open(url, "_blank"); // WhatsApp açılır
+      window.open(url, "_blank");
     });
   });
