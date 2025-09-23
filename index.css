@@ -237,7 +237,7 @@ section:not(#contact) {
   }
 
   .product-part {
-    gap: 2rem;
+    gap: 1.2rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     width: 90%;
@@ -271,6 +271,14 @@ section:not(#contact) {
 
 }
 @media (max-width: 480px) {
+  .product-part {
+  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+}
+
+
     .navbar-box {
         align-items: center;
         text-align: center;
@@ -306,4 +314,12 @@ section:not(#contact) {
     .brand-name img {
         width: 100%;
     }
+    
+section:not(#contact) {
+  display: flex;
+  padding: 0 12px !important;
+  align-items: center;
+  justify-content: center;
+  scroll-margin-top: 15px;
+}
 }
