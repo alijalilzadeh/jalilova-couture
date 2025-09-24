@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root {
+  --navbar-link: #060606;
+  --navbar-background: #E7DED5;
+  --contact-background: #D5C7A3;
+  --about-title: #493628;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: #FAF7F3;
+  height: 100vh;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.navbar-part {
+  background-color: var(--contact-background);
+  width: 100%;
+  height: 25%;
+}
+
+.img-part {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 90%;
+}
+
+.img-part img {
+  width: 400px;
+  height: 200px;
+}
+
+.about-part,
+.about-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-part {
+  width: 100%;
+}
+
+.about-box {
+  flex-direction: column;
+  width: 50%;
+  gap: .8rem;
+  line-height: 1.5;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  background-color: #fff;
+  border-radius: 25px;
+  padding: 22px 40px !important;
+
+}
+
+.about-box h2 {
+  color: var(--about-title);
+}
+
+.about-box .about-content {
+  line-height: 1.5;
+  text-align: center;
+}
+
+.about-box .about-content span {
+  font-weight: 600;
+  color: var(--about-title);
+
+}

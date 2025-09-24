@@ -147,6 +147,10 @@ h3 {
   white-space: nowrap;
 }
 
+.orderLinks  span i{
+  color: green;
+}
+
 section:not(#contact) {
   display: flex;
   padding: 0 !important;
