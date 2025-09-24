@@ -5,7 +5,7 @@
   --navbar-background: #E7DED5;
   --contact-background: #D5C7A3;
   --about-title: #493628;
-  --yellow-color : #ffd60a;
+  --yellow-color: #ffd60a;
 }
 
 html {
@@ -16,9 +16,8 @@ html {
   display: flex;
   width: 100%;
   flex-direction: column;
-  gap: 2rem;
+  gap: 4rem;
   background-color: #FAF7F3;
-  height: 100vh;
 }
 
 * {
@@ -91,22 +90,42 @@ body {
 
 }
 
-section {
+.reviews-part {
+  padding: 0 40px ;
   width: 100%;
-  display: flex;
+  display: grid;
   align-items: center;
   justify-content: center;
+  place-items: center;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2,1fr);
+  gap: 1rem;
 }
 
 .reviews-box {
   display: flex;
   flex-direction: column;
-  width: 30%;
-  gap: 1rem;
+  width: 95%;
+  height: 100%;
+  gap: 2rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
   background-color: #fff;
   border-radius: 20px;
-  padding: 20px;
+  padding: 20px 40px;
+  transition: transform .4s ease;
+  cursor:pointer;
+  transform: translateX(-50px);
+  opacity: 0;
+  transition: all 1s;
+}
+
+.reviews-box.interect{
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reviews-box:hover{
+  transform: translateY(-4px);
 }
 
 .avatar-part {
@@ -123,19 +142,93 @@ section {
   border: 2px solid var(--about-title);
 }
 
-.rating-box i{
+.rating-box i {
   color: var(--yellow-color);
 }
-/* 
-<div class="reviews-part">
-        <div class="avatar-part">
-          <div class="reviews-card">
-            <img src="avatarİmages/avatar1.avif" alt="Customs avatars" class="img-avatar">
-          </div>
-        </div>
-        <p class="custom-comment">
-          Çox gözəl paltar idi, toyda hamı soruşdu haradan almısan. Keyfiyyəti də gözlədiyimdən yüksək çıxdı. Əminliklə
-          dostlarıma da məsləhət görəcəyəm.
-        </p>
-      </div>
-*/
+
+.reviews-card {
+  display: flex;
+  gap: .7rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.reviews-card span {
+  white-space: nowrap;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.custom-comment{
+  font-size: 16px;
+}
+@media (max-width: 930px){
+  .avatar-part{
+    flex-direction: column;
+  }
+  .reviews-box{
+    padding: 20px  !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    gap: 2rem;
+  }
+
+  .img-part img {
+    width: 300px;
+    height: auto;
+  }
+
+  .about-box {
+    width: 90%;
+    padding: 20px !important;
+  }
+
+  .reviews-part {
+    grid-template-columns: repeat(2, 1fr); 
+    padding: 0 20px;
+  }
+
+  .reviews-box {
+    width: 100%;
+    padding: 15px 20px;
+    transform: translateX(0); 
+  }
+
+  .reviews-box.interect {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .img-part img {
+    width: 250px;
+  }
+
+  .reviews-part {
+    grid-template-columns: 1fr;
+  }
+  .about-box{
+    gap: 1.7rem;
+  }
+  .reviews-box {
+    padding: 15px;
+    gap: 1.5rem;
+  }
+  
+  .about-box h2 {
+    font-size: 1.5rem;
+  }
+  
+  .about-box .about-content {
+    font-size: 1.2rem;
+  }
+  
+.img-part img {
+  width: 400px;
+  height: 200px;
+}
+}

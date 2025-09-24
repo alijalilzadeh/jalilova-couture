@@ -10,3 +10,21 @@
       window.open(url, "_blank");
     });
   });
+
+  const observer = new IntersectionObserver(entries=>{
+    entries.forEach(entry =>{
+      if(entry.isIntersecting){
+        console.log(entry.target)
+        entry.target.classList.add("interect")
+      }
+      else{
+        entry.target.classList.remove("interect")
+      }
+    })
+  })
+
+  const reviewBoxes = document.querySelectorAll(".reviews-box");
+
+  reviewBoxes.forEach(reviewBox =>{
+    observer.observe(reviewBox);
+  })
