@@ -5,6 +5,7 @@
   --navbar-background: #E7DED5;
   --contact-background: #D5C7A3;
   --about-title: #493628;
+  --yellow-color : #ffd60a;
 }
 
 html {
@@ -65,7 +66,7 @@ body {
 
 .about-box {
   flex-direction: column;
-  width: 50%;
+  width: 60%;
   gap: .8rem;
   line-height: 1.5;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
@@ -89,3 +90,52 @@ body {
   color: var(--about-title);
 
 }
+
+section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reviews-box {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  gap: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.avatar-part {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.avatar-part img {
+  width: 40px;
+  height: auto;
+  border-radius: 50%;
+  border: 2px solid var(--about-title);
+}
+
+.rating-box i{
+  color: var(--yellow-color);
+}
+/* 
+<div class="reviews-part">
+        <div class="avatar-part">
+          <div class="reviews-card">
+            <img src="avatarİmages/avatar1.avif" alt="Customs avatars" class="img-avatar">
+          </div>
+        </div>
+        <p class="custom-comment">
+          Çox gözəl paltar idi, toyda hamı soruşdu haradan almısan. Keyfiyyəti də gözlədiyimdən yüksək çıxdı. Əminliklə
+          dostlarıma da məsləhət görəcəyəm.
+        </p>
+      </div>
+*/
