@@ -14,7 +14,7 @@ html {
 .container {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 4rem;
   background-color: #FAF7F3;
 }
 
@@ -33,6 +33,14 @@ body {
 
 .navbar-links {
   margin-right: 20px;
+}
+
+.navbar-part{
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
 }
 
 .navbar-box {
@@ -116,8 +124,6 @@ h3 {
   padding: 12px;
 }
 
-
-
 .img-part {
   display: flex;
   align-items: center;
@@ -147,7 +153,7 @@ h3 {
   white-space: nowrap;
 }
 
-.orderLinks  span i{
+.orderLinks span i {
   color: green;
 }
 
@@ -157,6 +163,7 @@ section:not(#contact) {
   align-items: center;
   justify-content: center;
   scroll-margin-top: 15px;
+  scroll-margin-top: 12g0px;
 }
 
 /* Contact Part */
