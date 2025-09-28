@@ -5,7 +5,7 @@
     a.addEventListener("click", () => {
       const product = a.dataset.product;
       const imgUrl = a.dataset.img;
-      const message = `Salam, Mən bu məhsulu sifariş etmək istəyirəm:\n${product}\n${imgUrl}`;
+      const message = `Salam, Mən bu geyimi sifariş etmək istəyirəm:\n${product}\n${imgUrl}`;
       const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
       window.open(url, "_blank");
     });
@@ -14,7 +14,6 @@
   const observer = new IntersectionObserver(entries=>{
     entries.forEach(entry =>{
       if(entry.isIntersecting){
-        console.log(entry.target)
         entry.target.classList.add("interect")
       }
       else{
