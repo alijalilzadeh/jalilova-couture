@@ -12,6 +12,12 @@ html {
   scroll-behavior: smooth;
 }
 
+h2 {
+  font-family: "Alex Brush", cursive;
+  text-align: center;
+}
+
+
 .container {
   display: flex;
   width: 100%;
@@ -95,7 +101,7 @@ body {
 .about-box h2 {
   color: var(--about-title);
   font-family: "Alex Brush", cursive;
-  font-weight:700;
+  font-weight: 700;
   font-size: 45px;
 }
 
@@ -110,8 +116,9 @@ body {
 
 }
 
-.custom-feedback-title {
-  text-align: center;
+/* Customer Part */
+
+.customer-feedback-title {
   margin: 3rem 0;
   color: var(--about-title);
   font-family: 'Alex Brush', cursive;
@@ -189,7 +196,7 @@ body {
   font-weight: 500;
 }
 
-.custom-comment {
+.customer-comment {
   font-size: 15px;
 }
 
