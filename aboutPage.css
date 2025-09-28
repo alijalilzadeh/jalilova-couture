@@ -249,4 +249,8 @@ body {
   width: 400px;
   height: 200px;
 }
+.img-part a i{
+  top: 15px;
+  left: 15px;
+}
 }
