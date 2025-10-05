@@ -218,7 +218,7 @@ section:not(#contact) {
 
 .terms-box {
   width: 40%;
-  display: flex;
+  display: none;
   max-height: 0px;
   flex-direction: column;
   align-items: center;
@@ -226,13 +226,80 @@ section:not(#contact) {
   border-radius: 20px;
   padding: 10px 15px;
   opacity: 0;
-  transition: max-height .4s;
 }
 
-.terms-box.active {
-  opacity: 1;
-  max-height: 400px;
+.terms-box.open {
+  animation: openingStatus .8s forwards;
 }
+
+.terms-box.close {
+  animation: closingStatus .8s forwards;
+}
+
+@keyframes openingStatus {
+  0% {
+    max-height: 0;
+    opacity: 0.3;
+  }
+
+  40% {
+    max-height: 200px;
+  }
+
+  50% {
+    max-height: 250px;
+  }
+
+  60% {
+    max-height: 300px;
+    opacity: 0.8;
+  }
+
+  70% {
+    max-height: 350px;
+    opacity: 0.9;
+  }
+
+  100% {
+    max-height: 400px;
+    opacity: 1;
+  }
+}
+
+
+@keyframes closingStatus {
+  0% {
+
+    max-height: 400px;
+    opacity: 1;
+  }
+
+  40% {
+    max-height: 350px;
+    opacity: 0.9;
+  }
+
+  50% {
+    max-height: 300px;
+    opacity: 0.8;
+  }
+
+  60% {
+    max-height: 250px;
+
+  }
+
+  70% {
+    max-height: 200px;
+  }
+
+  100% {
+    max-height: 0;
+    opacity: 0.3;
+  }
+}
+
+
 
 .terms-box span {
   color: var(--about-title);
@@ -457,16 +524,20 @@ section:not(#contact) {
   section:not(#contact) {
     padding: 0 14px !important;
   }
-  .terms-service{
+
+  .terms-service {
     gap: 3rem;
   }
+
   .terms-box {
     width: 70%;
   }
-  .terms-box p{
+
+  .terms-box p {
     font-size: 15px;
   }
+
   .terms-service {
-  gap: .3rem;
-}
+    gap: .3rem;
+  }
 }

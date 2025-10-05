@@ -38,11 +38,14 @@ personalOrder.addEventListener("click", () => {
 const termsBox = document.querySelector(".terms-box");
 const arrowIcon = document.querySelector(".terms-service i");
 document.querySelector(".order-form-box .terms-service").addEventListener("click", () => {
-  termsBox.classList.toggle("active");
   if (termsBox.style.display === "none" || !termsBox.style.display) {
+    termsBox.classList.remove("close");
+    termsBox.classList.add("open");
     arrowIcon.className = "fa-solid fa-arrow-up";
     termsBox.style.display = "flex";
   } else {
+    termsBox.classList.remove("open");
+    termsBox.classList.add("close");
     arrowIcon.className = "fa-solid fa-arrow-down";
     termsBox.style.display = "none";
   }
