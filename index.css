@@ -466,4 +466,7 @@ section:not(#contact) {
   .terms-box p{
     font-size: 15px;
   }
+  .terms-service {
+  gap: .3rem;
+}
 }
