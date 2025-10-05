@@ -42,7 +42,7 @@ body {
   margin-right: 20px;
 }
 
-.navbar-part{
+.navbar-part {
   position: sticky;
   top: 0;
   left: 0;
@@ -172,18 +172,18 @@ section:not(#contact) {
   scroll-margin-top: 100px;
 }
 
-.order-form-box{
+.order-form-box {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
 }
 
-.order-title{
+.order-title {
   font-size: 40px;
 }
 
-.order-form-box a{
+.order-form-box .personal-order {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -196,7 +196,65 @@ section:not(#contact) {
   transition: all .4s;
 }
 
-.order-form-box a:hover{
+.order-form-box .terms {
+  color: var(--about-title);
+  font-size: 17px;
+}
+
+.terms-service {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .7rem;
+  cursor: pointer;
+  transition: all .4s;
+}
+
+.terms-service i {
+  font-size: 13px;
+  color: var(--about-title);
+  align-items: center;
+}
+
+.terms-box {
+  width: 40%;
+  display: flex;
+  max-height: 0px;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid var(--about-title);
+  border-radius: 20px;
+  padding: 10px 15px;
+  opacity: 0;
+  transition: max-height .4s;
+}
+
+.terms-box.active {
+  opacity: 1;
+  max-height: 400px;
+}
+
+.terms-box span {
+  color: var(--about-title);
+  font-weight: 600;
+}
+
+.terms-box p {
+  text-align: center;
+}
+
+/* <div class="terms-box">
+          <p><span>Qeyd:</span>
+            Behin ödənildiyi vaxtdan 24 saat vaxt keçdikdən sonra ödənilən beh qaytrılmır. Əgər geyim itərsə və ya
+            zədələnərsə, buna görə biz məsuliyyət daşımırıq
+          </p>
+          <p>
+            Geyimin təhvil verilməsi günündən artıq vaxt keçdiyi halda, hər gecikən gün üçün geyimin ödənişinin 50%-nin
+            ödənilməsi tələb olunacaq
+          </p>
+        </div> */
+
+.order-form-box .personal-order:hover {
   transform: translateY(-2px);
 }
 
@@ -251,7 +309,7 @@ section:not(#contact) {
   width: 100%;
 }
 
-.brand-name .brand-title{
+.brand-name .brand-title {
   font-size: 40px;
   font-weight: 500;
   line-height: 1.3;
@@ -362,20 +420,20 @@ section:not(#contact) {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .order-form-box{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-}
+  .order-form-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
 
-.order-title{
-  font-size: 30px;
-}
+  .order-title {
+    font-size: 30px;
+  }
 
-.order-form-box a{
-  font-size: 13px;
-}
+  .order-form-box a {
+    font-size: 13px;
+  }
 
   .contact-links {
     flex-direction: row;
@@ -387,7 +445,7 @@ section:not(#contact) {
     text-align: center;
   }
 
-  .brand-name .brand-title{
+  .brand-name .brand-title {
     font-size: 31px;
     font-weight: 500;
   }
@@ -398,5 +456,14 @@ section:not(#contact) {
 
   section:not(#contact) {
     padding: 0 14px !important;
+  }
+  .terms-service{
+    gap: 3rem;
+  }
+  .terms-box {
+    width: 70%;
+  }
+  .terms-box p{
+    font-size: 15px;
   }
 }
