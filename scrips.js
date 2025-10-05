@@ -1,12 +1,12 @@
-  const phone = "994556028288"; 
+  const phoneNumberNumber = "994556028288"; 
   const as = document.querySelectorAll(".orderLinks");
 
  as.forEach(a => {
     a.addEventListener("click", () => {
       const product = a.dataset.product;
       const imgUrl = a.dataset.img;
-      const message = `Salam, Mən bu geyimi sifariş etmək istəyirəm:\n${product}\n${imgUrl}`;
-      const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+      const message = `Salam, Mən bu geyimi sifariş etmək istəyirəm:${product}\n${imgUrl}`;
+      const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
       window.open(url, "_blank");
     });
   });
@@ -27,3 +27,10 @@
   reviewBoxes.forEach(reviewBox =>{
     observer.observe(reviewBox);
   })
+
+const personalOrder = document.querySelector(".personal-order");
+personalOrder.addEventListener("click",()=>{
+  const message = "Salam, Jalilova Couture saytından yazıram. Özümə xüsusi geyim tikdirmək istəyirəm."
+  const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  window.open(url,"_blank")
+})
