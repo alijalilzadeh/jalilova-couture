@@ -50,3 +50,14 @@ document.querySelector(".order-form-box .terms-service").addEventListener("click
     termsBox.style.display = "none";
   }
 });
+
+
+const productBoxes = document.querySelectorAll(".product-box");
+const simpleViewBox = document.querySelector(".simple-view-products");
+
+productBoxes.forEach(productBox =>{
+  productBox.addEventListener("click",()=>{
+    console.log("Hello")
+    // simpleViewBox.innerHTML = `<p>Hello</p>`
+  })
+})

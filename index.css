@@ -99,6 +99,12 @@ a {
 
 /* Product Box */
 
+.simple-view-products{
+  width: 250px;
+  height: 250px;
+  background-color: black;
+}
+
 .product-part {
   gap: 2rem;
   display: grid;
@@ -166,6 +172,7 @@ h3 {
 
 section:not(#contact) {
   display: flex;
+  flex-direction: column;
   padding: 0 !important;
   align-items: center;
   justify-content: center;
