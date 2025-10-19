@@ -54,10 +54,18 @@ document.querySelector(".order-form-box .terms-service").addEventListener("click
 
 const productBoxes = document.querySelectorAll(".product-box");
 const simpleViewBox = document.querySelector(".simple-view-products");
-
+let openStatus = false;
 productBoxes.forEach(productBox =>{
   productBox.addEventListener("click",()=>{
     console.log("Hello")
-    // simpleViewBox.innerHTML = `<p>Hello</p>`
+    if(!openStatus){
+        simpleViewBox.style.display = "block"  
+        openStatus =! openStatus;
+    }
+    else{
+        simpleViewBox.style.display = "none";
+        openStatus =! openStatus;
+    }
+     simpleViewBox.innerHTML = `<p>Hello</p>`
   })
 })

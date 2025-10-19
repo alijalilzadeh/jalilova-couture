@@ -103,6 +103,7 @@ a {
   width: 250px;
   height: 250px;
   background-color: black;
+  display: none;
 }
 
 .product-part {
